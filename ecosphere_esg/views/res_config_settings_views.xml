@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_config_settings_form" model="ir.ui.view">
+        <field name="name">res.config.settings.form.esg</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.view_general_configuration_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='ecosphere_esg']" position="after">
+                <app string="EcoSphere ESG" name="ecosphere_esg">
+                    <block title="ESG Configuration">
+                        <setting string="Require Proof for CSR/Challenge Approval"
+                                 help="When enabled, participation cannot be approved without an attached proof file.">
+                            <field name="require_proof"/>
+                        </setting>
+                        <setting string="Auto Emission Calculation"
+                                 help="Calculate carbon transactions automatically from linked ERP records.">
+                            <field name="auto_emission_calc"/>
+                        </setting>
+                        <setting string="Badge Auto-Award"
+                                 help="Automatically assign badges when XP/challenge thresholds are met.">
+                            <field name="badge_auto_award"/>
+                        </setting>
+                    </block>
+                    <block title="ESG Score Weights">
+                        <setting>
+                            <div class="row mt16">
+                                <div class="col-4">
+                                    <label for="weight_environmental"/>
+                                    <field name="weight_environmental" class="w-50"/>
+                                </div>
+                                <div class="col-4">
+                                    <label for="weight_social"/>
+                                    <field name="weight_social" class="w-50"/>
+                                </div>
+                                <div class="col-4">
+                                    <label for="weight_governance"/>
+                                    <field name="weight_governance" class="w-50"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Notification Settings">
+                        <setting string="Notify on New Compliance Issue">
+                            <field name="notify_compliance_issue"/>
+                        </setting>
+                        <setting string="Notify on Challenge Approval/Rejection">
+                            <field name="notify_challenge_decision"/>
+                        </setting>
+                        <setting string="Notify on CSR Approval/Rejection">
+                            <field name="notify_csr_decision"/>
+                        </setting>
+                        <setting string="Notify Policy Acknowledgement Reminders">
+                            <field name="notify_policy_reminder"/>
+                        </setting>
+                        <setting string="Notify on Badge Unlock">
+                            <field name="notify_badge_unlock"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
