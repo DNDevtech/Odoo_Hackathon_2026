@@ -4,9 +4,9 @@
         <field name="name">esg.department.score.list</field>
         <field name="model">esg.department.score</field>
         <field name="arch" type="xml">
-            <list string="Department ESG Scores" decoration-success="total_score >= 80"
-                  decoration-warning="total_score >= 50 and total_score < 80"
-                  decoration-danger="total_score < 50">
+            <list string="Department ESG Scores" decoration-success="total_score &gt;= 80"
+                  decoration-warning="total_score &gt;= 50 and total_score &lt; 80"
+                  decoration-danger="total_score &lt; 50">
                 <field name="department_id"/>
                 <field name="period"/>
                 <field name="environmental_score"/>
