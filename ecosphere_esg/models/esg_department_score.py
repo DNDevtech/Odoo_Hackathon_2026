@@ -8,7 +8,7 @@ class EsgDepartmentScore(models.Model):
     _order = "department_id"
 
     name = fields.Char(compute="_compute_name")
-    department_id = fields.Many2one("esg.department", string="Department", required=True, unique=True)
+    department_id = fields.Many2one("esg.department", string="Department", required=True)
     period = fields.Char(string="Period", help="e.g. 2025-Q1")
     environmental_score = fields.Float(string="Environmental Score", default=0)
     social_score = fields.Float(string="Social Score", default=0)

@@ -5,10 +5,10 @@ from odoo import api, fields, models
 class AssetflowEmployee(models.Model):
     _name = "assetflow.employee"
     _description = "Employee"
-    _inherits = {"res.users": "user_id"}
     _order = "name"
 
-    user_id = fields.Many2one("res.users", string="Related User", required=True, ondelete="cascade")
+    name = fields.Char(required=True, tracking=True)
+    user_id = fields.Many2one("res.users", string="Related User", ondelete="set null")
     department_id = fields.Many2one("assetflow.department", string="Department")
     role = fields.Selection([
         ("employee", "Employee"),

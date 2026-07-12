@@ -9,10 +9,7 @@
                 <field name="employee_id"/>
                 <field name="activity_id"/>
                 <field name="points_earned"/>
-                <field name="approval_status" widget="badge"
-                       decoration-warning="approval_status == 'pending'"
-                       decoration-success="approval_status == 'approved'"
-                       decoration-danger="approval_status == 'rejected'"/>
+                <field name="approval_status" widget="badge"/>
                 <field name="completion_date"/>
             </list>
         </field>

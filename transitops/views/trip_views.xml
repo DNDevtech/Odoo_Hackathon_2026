@@ -5,8 +5,7 @@
         <field name="name">transitops.trip.list</field>
         <field name="model">transitops.trip</field>
         <field name="arch" type="xml">
-            <list string="Trips" decoration-info="state == 'dispatched'"
-                  decoration-success="state == 'completed'" decoration-muted="state == 'cancelled'">
+            <list string="Trips">
                 <field name="name"/>
                 <field name="source"/>
                 <field name="destination"/>
@@ -14,11 +13,7 @@
                 <field name="driver_id"/>
                 <field name="cargo_weight"/>
                 <field name="planned_distance"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-info="state == 'dispatched'"
-                       decoration-success="state == 'completed'"
-                       decoration-muted="state == 'cancelled'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

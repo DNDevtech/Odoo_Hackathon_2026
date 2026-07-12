@@ -10,11 +10,7 @@
                 <field name="auditor_id"/>
                 <field name="audit_date"/>
                 <field name="issue_count"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'planned'"
-                       decoration-info="state == 'in_progress'"
-                       decoration-success="state == 'completed'"
-                       decoration-muted="state == 'cancelled'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

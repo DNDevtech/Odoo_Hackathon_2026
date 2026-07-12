@@ -10,11 +10,7 @@
                 <field name="employee_id"/>
                 <field name="start_datetime"/>
                 <field name="end_datetime"/>
-                <field name="state" widget="badge"
-                       decoration-info="state == 'upcoming'"
-                       decoration-warning="state == 'ongoing'"
-                       decoration-success="state == 'completed'"
-                       decoration-muted="state == 'cancelled'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

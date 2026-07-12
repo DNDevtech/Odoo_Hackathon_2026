@@ -13,12 +13,7 @@
                 <field name="department_id"/>
                 <field name="location"/>
                 <field name="condition"/>
-                <field name="state" widget="badge"
-                       decoration-success="state == 'available'"
-                       decoration-info="state == 'allocated'"
-                       decoration-warning="state in ('reserved','under_maintenance')"
-                       decoration-danger="state == 'lost'"
-                       decoration-muted="state in ('retired','disposed')"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

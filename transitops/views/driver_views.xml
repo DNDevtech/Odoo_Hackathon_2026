@@ -13,11 +13,7 @@
                 <field name="contact_number"/>
                 <field name="safety_score"/>
                 <field name="is_license_expired" optional="hide"/>
-                <field name="status" widget="badge"
-                       decoration-success="status == 'available'"
-                       decoration-info="status == 'on_trip'"
-                       decoration-warning="status == 'off_duty'"
-                       decoration-danger="status == 'suspended'"/>
+                <field name="status" widget="badge"/>
             </list>
         </field>
     </record>

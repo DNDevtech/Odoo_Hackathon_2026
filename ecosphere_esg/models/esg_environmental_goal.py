@@ -20,7 +20,7 @@ class EsgEnvironmentalGoal(models.Model):
         ("active", "Active"),
         ("achieved", "Achieved"),
         ("missed", "Missed"),
-    ], default="draft", tracking=True, copy=False)
+    ], default="draft", copy=False)
 
     progress = fields.Float(compute="_compute_progress", store=True, string="Progress (%)")
 

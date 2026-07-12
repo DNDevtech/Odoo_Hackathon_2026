@@ -8,9 +8,7 @@
                 <field name="name"/>
                 <field name="points_required"/>
                 <field name="stock"/>
-                <field name="state" widget="badge"
-                       decoration-success="state == 'available'"
-                       decoration-danger="state == 'out_of_stock'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

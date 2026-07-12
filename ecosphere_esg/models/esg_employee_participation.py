@@ -11,7 +11,7 @@ class EsgEmployeeParticipation(models.Model):
     name = fields.Char(string="Reference", copy=False, readonly=True, default=lambda self: _("New"))
     employee_id = fields.Many2one("esg.employee", string="Employee", required=True, tracking=True)
     activity_id = fields.Many2one("esg.csr.activity", string="CSR Activity", required=True, tracking=True)
-    department_id = fields.Many2one("esg.department", string="Department", compute="_compute_department", store=True)
+    department_id = fields.Many2one("esg.department", string="Department")
     proof = fields.Binary(string="Proof")
     proof_filename = fields.Char(string="Proof Filename")
     approval_status = fields.Selection([
@@ -22,8 +22,8 @@ class EsgEmployeeParticipation(models.Model):
     points_earned = fields.Integer(string="Points Earned", default=0)
     completion_date = fields.Date(string="Completion Date")
 
-    @api.depends("employee_id.department_id")
-    def _compute_department(self):
+    @api.onchange("employee_id")
+    def _onchange_employee_id(self):
         for p in self:
             p.department_id = p.employee_id.department_id if p.employee_id else False
 

@@ -9,10 +9,7 @@
                 <field name="asset_id"/>
                 <field name="from_employee_id"/>
                 <field name="to_employee_id"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'requested'"
-                       decoration-success="state in ('approved','completed')"
-                       decoration-danger="state == 'rejected'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

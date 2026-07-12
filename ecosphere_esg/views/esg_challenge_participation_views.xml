@@ -9,10 +9,7 @@
                 <field name="challenge_id"/>
                 <field name="employee_id"/>
                 <field name="progress" widget="badge"/>
-                <field name="approval" widget="badge"
-                       decoration-warning="approval == 'pending'"
-                       decoration-success="approval == 'approved'"
-                       decoration-danger="approval == 'rejected'"/>
+                <field name="approval" widget="badge"/>
                 <field name="xp_awarded"/>
             </list>
         </field>

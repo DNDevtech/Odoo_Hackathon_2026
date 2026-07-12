@@ -9,10 +9,7 @@
                 <field name="category"/>
                 <field name="version"/>
                 <field name="effective_date"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-success="state == 'active'"
-                       decoration-muted="state == 'archived'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

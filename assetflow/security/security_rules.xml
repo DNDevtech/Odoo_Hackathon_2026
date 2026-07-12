@@ -7,13 +7,6 @@
         <field name="groups" eval="[(4, ref('group_assetflow_department_head'))]"/>
     </record>
 
-    <record id="assetflow_rule_employee_assets" model="ir.rule">
-        <field name="name">AssetFlow: Employee sees own allocated assets</field>
-        <field name="model_id" ref="model_assetflow_asset"/>
-        <field name="domain_force">[('allocation_ids.employee_id.user_id', '=', uid)]</field>
-        <field name="groups" eval="[(4, ref('group_assetflow_employee'))]"/>
-    </record>
-
     <record id="assetflow_rule_manager_all" model="ir.rule">
         <field name="name">AssetFlow: Manager sees all assets</field>
         <field name="model_id" ref="model_assetflow_asset"/>

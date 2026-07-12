@@ -12,6 +12,12 @@ class EsgChallengeParticipation(models.Model):
     name = fields.Char(string="Reference", copy=False, readonly=True, default=lambda self: _("New"))
     challenge_id = fields.Many2one("esg.challenge", string="Challenge", required=True, tracking=True)
     employee_id = fields.Many2one("esg.employee", string="Employee", required=True, tracking=True)
+    department_id = fields.Many2one("esg.department", string="Department")
+
+    @api.onchange("employee_id")
+    def _onchange_employee_id(self):
+        for p in self:
+            p.department_id = p.employee_id.department_id if p.employee_id else False
     progress = fields.Selection([
         ("not_started", "Not Started"),
         ("in_progress", "In Progress"),

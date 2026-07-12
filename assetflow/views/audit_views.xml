@@ -10,10 +10,7 @@
                 <field name="date_from"/>
                 <field name="date_to"/>
                 <field name="discrepancy_count"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-info="state == 'in_progress'"
-                       decoration-success="state in ('completed','closed')"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

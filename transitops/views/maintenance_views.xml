@@ -5,16 +5,13 @@
         <field name="name">transitops.maintenance.list</field>
         <field name="model">transitops.maintenance</field>
         <field name="arch" type="xml">
-            <list string="Maintenance Records" decoration-warning="state == 'in_progress'" decoration-success="state == 'done'">
+            <list string="Maintenance Records">
                 <field name="name"/>
                 <field name="vehicle_id"/>
                 <field name="description"/>
                 <field name="date"/>
                 <field name="cost"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-warning="state == 'in_progress'"
-                       decoration-success="state == 'done'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

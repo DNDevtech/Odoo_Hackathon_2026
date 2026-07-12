@@ -27,5 +27,6 @@
         <field name="name">Admin</field>
         <field name="category_id" ref="module_category_assetflow"/>
         <field name="implied_ids" eval="[(4, ref('group_assetflow_asset_manager'))]"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
     </record>
 </odoo>

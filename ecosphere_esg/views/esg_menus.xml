@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_esg_root" name="EcoSphere ESG" sequence="10"
-              groups="group_esg_user"/>
+    <menuitem id="menu_esg_root" name="EcoSphere ESG" sequence="10"/>
 
     <menuitem id="menu_esg_dashboard" name="Dashboard" parent="menu_esg_root"
               action="action_esg_dashboard" sequence="10"/>
@@ -50,12 +49,13 @@
     <menuitem id="menu_esg_department_score" name="Department Scores" parent="menu_esg_reports"
               action="action_esg_department_score" sequence="10"/>
 
-    <menuitem id="menu_esg_config" name="Configuration" parent="menu_esg_root" sequence="70"
-              groups="group_esg_manager"/>
+    <menuitem id="menu_esg_config" name="Configuration" parent="menu_esg_root" sequence="70"/>
     <menuitem id="menu_esg_department" name="Departments" parent="menu_esg_config"
               action="action_esg_department" sequence="10"/>
     <menuitem id="menu_esg_category" name="Categories" parent="menu_esg_config"
               action="action_esg_category" sequence="20"/>
     <menuitem id="menu_esg_employee" name="Employees" parent="menu_esg_config"
               action="action_esg_employee" sequence="30"/>
+    <menuitem id="menu_esg_settings" name="Settings" parent="menu_esg_config"
+              action="action_esg_settings" sequence="40"/>
 </odoo>

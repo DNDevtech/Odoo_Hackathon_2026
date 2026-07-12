@@ -10,11 +10,7 @@
                 <field name="department_id"/>
                 <field name="activity_date"/>
                 <field name="participation_count"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-info="state == 'active'"
-                       decoration-success="state == 'completed'"
-                       decoration-muted="state == 'cancelled'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

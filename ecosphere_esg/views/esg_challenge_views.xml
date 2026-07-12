@@ -11,12 +11,7 @@
                 <field name="difficulty"/>
                 <field name="deadline"/>
                 <field name="participation_count"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'draft'"
-                       decoration-info="state == 'active'"
-                       decoration-warning="state == 'under_review'"
-                       decoration-success="state == 'completed'"
-                       decoration-muted="state == 'archived'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

@@ -9,9 +9,7 @@
                 <field name="policy_id"/>
                 <field name="employee_id"/>
                 <field name="acknowledged_date"/>
-                <field name="state" widget="badge"
-                       decoration-warning="state == 'pending'"
-                       decoration-success="state == 'acknowledged'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

@@ -5,18 +5,18 @@ from odoo import api, fields, models
 class EsgEmployee(models.Model):
     _name = "esg.employee"
     _description = "Employee"
-    _inherits = {"res.users": "user_id"}
     _order = "name"
 
-    user_id = fields.Many2one("res.users", string="Related User", required=True, ondelete="cascade")
+    name = fields.Char(required=True)
+    user_id = fields.Many2one("res.users", string="Related User", ondelete="set null")
     department_id = fields.Many2one("esg.department", string="Department")
     job_title = fields.Char(string="Job Title")
     status = fields.Selection([
         ("active", "Active"),
         ("inactive", "Inactive"),
-    ], default="active", tracking=True)
+    ], default="active")
 
-    total_xp = fields.Integer(string="Total XP", default=0, tracking=True)
+    total_xp = fields.Integer(string="Total XP", default=0)
     completed_challenges = fields.Integer(string="Completed Challenges", default=0)
 
     participation_ids = fields.One2many("esg.employee.participation", "employee_id")

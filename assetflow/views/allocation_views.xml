@@ -11,13 +11,7 @@
                 <field name="department_id"/>
                 <field name="expected_return_date"/>
                 <field name="is_overdue" invisible="1"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'requested'"
-                       decoration-info="state == 'approved'"
-                       decoration-success="state == 'active'"
-                       decoration-warning="state == 'return_requested'"
-                       decoration-muted="state == 'returned'"
-                       decoration-danger="state == 'rejected'"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

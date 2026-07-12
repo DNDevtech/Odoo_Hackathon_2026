@@ -7,17 +7,11 @@
             <list string="Compliance Issues" decoration-danger="is_overdue" decoration-warning="severity == 'high'">
                 <field name="name"/>
                 <field name="audit_id"/>
-                <field name="severity" widget="badge"
-                       decoration-info="severity == 'low'"
-                       decoration-warning="severity == 'medium'"
-                       decoration-danger="severity in ('high','critical')"/>
+                <field name="severity" widget="badge"/>
                 <field name="owner_id"/>
                 <field name="due_date"/>
                 <field name="is_overdue" invisible="1"/>
-                <field name="state" widget="badge"
-                       decoration-secondary="state == 'open'"
-                       decoration-info="state == 'in_progress'"
-                       decoration-success="state in ('resolved','closed')"/>
+                <field name="state" widget="badge"/>
             </list>
         </field>
     </record>

@@ -8,7 +8,7 @@ class EsgDepartment(models.Model):
     _description = "Department"
     _order = "name"
 
-    name = fields.Char(required=True, tracking=True)
+    name = fields.Char(required=True)
     code = fields.Char()
     head_id = fields.Many2one("res.users", string="Department Head")
     parent_id = fields.Many2one("esg.department", string="Parent Department", index=True, ondelete="cascade")
