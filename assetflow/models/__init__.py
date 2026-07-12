@@ -8,3 +8,4 @@ from . import booking
 from . import maintenance_request
 from . import audit_line
 from . import audit_cycle
+from . import dashboard

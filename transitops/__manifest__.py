@@ -21,13 +21,14 @@ rules from the TransitOps specification:
 * Role Based Access Control: Fleet Manager, Driver, Safety Officer,
   Financial Analyst
 """,
-    'author': 'TransitOps',
+    'author': 'kaushik jasoliya',
     'license': 'LGPL-3',
     'depends': ['base', 'mail'],
     'data': [
         'security/transitops_security.xml',
         'security/ir.model.access.csv',
         'data/transitops_sequence.xml',
+        'data/transitops_demo_data.xml',
         'views/vehicle_views.xml',
         'views/driver_views.xml',
         'views/trip_views.xml',
@@ -35,6 +36,7 @@ rules from the TransitOps specification:
         'views/fuel_log_views.xml',
         'views/expense_views.xml',
         'views/dashboard_views.xml',
+        'views/dashboard_templates.xml',
         'views/transitops_menus.xml',
     ],
     'installable': True,

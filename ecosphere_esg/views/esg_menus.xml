@@ -2,8 +2,17 @@
 <odoo>
     <menuitem id="menu_esg_root" name="EcoSphere ESG" sequence="10"/>
 
+    <record id="action_esg_dashboard_view" model="ir.actions.act_window">
+        <field name="name">ESG Dashboard</field>
+        <field name="res_model">ecosphere_esg.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_esg_dashboard_form"/>
+        <field name="target">main</field>
+        <field name="context">{'create': False, 'delete': False, 'edit': False}</field>
+    </record>
+
     <menuitem id="menu_esg_dashboard" name="Dashboard" parent="menu_esg_root"
-              action="action_esg_dashboard" sequence="10"/>
+              action="action_esg_dashboard_view" sequence="10"/>
 
     <menuitem id="menu_esg_environmental" name="Environmental" parent="menu_esg_root" sequence="20"/>
     <menuitem id="menu_esg_carbon_transaction" name="Carbon Transactions" parent="menu_esg_environmental"

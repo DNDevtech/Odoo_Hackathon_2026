@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id="view_transitops_dashboard_form" model="ir.ui.view">
+        <field name="name">transitops.dashboard.form</field>
+        <field name="model">transitops.dashboard</field>
+        <field name="arch" type="xml">
+            <form><field name="html" widget="html" readonly="1"/></form>
+        </field>
+    </record>
+
+    <record id="action_transitops_dashboard_view" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">transitops.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_transitops_dashboard_form"/>
+        <field name="target">main</field>
+        <field name="context">{'create': False, 'delete': False, 'edit': False}</field>
+    </record>
+
     <!-- Fleet status Kanban dashboard (Assets Available/On Trip/In Shop/Retired as KPI columns) -->
     <record id="view_transitops_dashboard_kanban" model="ir.ui.view">
         <field name="name">transitops.vehicle.dashboard.kanban</field>

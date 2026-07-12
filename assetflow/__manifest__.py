@@ -10,7 +10,7 @@ Track, allocate and maintain physical assets and book shared resources.
 Includes departments, categories, employee directory, asset lifecycle,
 allocations, transfers, bookings, maintenance requests and audit cycles.
 """,
-    "author": "AssetFlow",
+    "author": "kaushik jasoliya",
     "license": "LGPL-3",
     "depends": ["base", "mail", "web"],
     "data": [
@@ -20,6 +20,7 @@ allocations, transfers, bookings, maintenance requests and audit cycles.
         "data/ir_sequence_data.xml",
         "data/cron_data.xml",
         "data/mail_template_data.xml",
+        "data/assetflow_demo_data.xml",
         "views/department_views.xml",
         "views/category_views.xml",
         "views/employee_views.xml",
@@ -30,6 +31,7 @@ allocations, transfers, bookings, maintenance requests and audit cycles.
         "views/maintenance_request_views.xml",
         "views/audit_views.xml",
         "views/dashboard_views.xml",
+        "views/dashboard_templates.xml",
         "views/menus.xml",
         "report/asset_report.xml",
     ],

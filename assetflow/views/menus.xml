@@ -2,8 +2,17 @@
 <odoo>
     <menuitem id="menu_assetflow_root" name="AssetFlow" sequence="10"/>
 
+    <record id="action_assetflow_dashboard_view" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">assetflow.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_assetflow_dashboard_form"/>
+        <field name="target">main</field>
+        <field name="context">{'create': False, 'delete': False, 'edit': False}</field>
+    </record>
+
     <menuitem id="menu_assetflow_dashboard" name="Dashboard" parent="menu_assetflow_root"
-              action="action_assetflow_dashboard" sequence="10"/>
+              action="action_assetflow_dashboard_view" sequence="10"/>
 
     <menuitem id="menu_assetflow_assets" name="Assets" parent="menu_assetflow_root" sequence="20"/>
     <menuitem id="menu_assetflow_asset" name="Asset Directory" parent="menu_assetflow_assets"

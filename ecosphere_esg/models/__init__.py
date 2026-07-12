@@ -17,3 +17,4 @@ from . import esg_audit
 from . import esg_compliance_issue
 from . import esg_department_score
 from . import res_config_settings
+from . import dashboard

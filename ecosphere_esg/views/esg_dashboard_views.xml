@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="view_esg_dashboard_form" model="ir.ui.view">
+        <field name="name">esg.dashboard.form</field>
+        <field name="model">ecosphere_esg.dashboard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="html" widget="html" readonly="1"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_esg_dashboard_view" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">ecosphere_esg.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_esg_dashboard_form"/>
+        <field name="target">main</field>
+        <field name="context">{'create': False, 'delete': False, 'edit': False}</field>
+    </record>
+
     <record id="view_esg_dashboard_kanban" model="ir.ui.view">
         <field name="name">esg.dashboard.kanban</field>
         <field name="model">esg.department.score</field>
