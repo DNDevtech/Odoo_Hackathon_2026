@@ -2,6 +2,7 @@
 
 import { Component, useState, onWillStart } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
+import { user } from "@web/core/user";
 
 const LEAVE_STATE_LABELS = {
     draft: "Draft",
@@ -19,12 +20,11 @@ export class EmployeeDashboard extends Component {
     setup() {
         this.orm = useService("orm");
         this.action = useService("action");
-        this.user = useService("user");
         this.state = useState({ recentLeaves: [], loading: true });
         onWillStart(async () => {
             this.state.recentLeaves = await this.orm.searchRead(
                 "hr.leave",
-                [["employee_id.user_id", "=", this.user.userId]],
+                [["employee_id.user_id", "=", user.userId]],
                 ["holiday_status_id", "date_from", "date_to", "state"],
                 { order: "create_date desc", limit: 5 }
             );

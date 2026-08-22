@@ -78,6 +78,11 @@
         &:last-child {
             border-bottom: none;
         }
+
+        &.o_dayflow_list_row_column {
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
 
     .o_dayflow_row_actions {
